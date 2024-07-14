@@ -1,29 +1,36 @@
-# get-to-know-delvin
+npm create vite@latest
 
-This template should help get you started developing with Vue 3 in Vite.
+git init
+git add .
+git commit -m "Initial commit"
+git branch -M main
+git remote add origin https://github.com/YOUR_USERNAME/my-vue-app.git
+git push -u origin main
 
-## Recommended IDE Setup
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+npm install --save-dev gh-pages
 
-## Customize configuration
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+// vite.config.js
+import { defineConfig } from 'vite'
+import vue from '@vitejs/plugin-vue'
 
-## Project Setup
+export default defineConfig({
+  plugins: [vue()],
+  base: '/my-vue-app/' // Replace 'my-vue-app' with the name of your GitHub repository
+})
 
-```sh
-npm install
-```
 
-### Compile and Hot-Reload for Development
+Update package.json:
 
-```sh
-npm run dev
-```
+"homepage": "https://YOUR_USERNAME.github.io/my-vue-app",
+"scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "deploy": "gh-pages -d dist"
+  },
 
-### Compile and Minify for Production
 
-```sh
 npm run build
-```
+npm run deploy                // Automatically published git repository. Please wait for update. 
