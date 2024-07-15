@@ -1,0 +1,1 @@
+import{_ as e,c as s,o,a as t}from"./index-D2PdKEze.js";const c={},_={class:"about"},a=t("h1",null,"This is my projects",-1),n=[a];function r(i,d){return o(),s("div",_,n)}const f=e(c,[["render",r]]);export{f as default};
